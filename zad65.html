@@ -1,16 +1,15 @@
 <html>
+
 <body>
-<div style= "color:red;font-size:50px;">
-<script language="JavaScript">
-var x=prompt("Podaj liczbe x=:","");
-var rok_man=parseFloat(x);
-document.write
-	("Wczytany rok="+rok_man+"<br>");
-if(rok_man%1995==0)
-{document.write ("<font color=blue size=4> Brawo znasz rok od kiedy działa JavaScript</font>"+"<br>");}
-else 
-{document.write ("<font color=red size=7> Źle musisz jeszcze poczytać</font>"+"<br>");}
-</script>
-</div>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var x = prompt("podaj rok", "");
+            var rok_bab = parseFloat(x);
+            document.write("czytany rok =" + rok_bab + "<br>");
+            if (rok_bab == 1995) { document.write(`<h3 style="font-size: 70px; color:blue">Brawo znasz rok powstania java script </h3><br>`); }
+            else { document.write(`<h5 style="font-size: 70px; color:red">źle musisz jescze poczytać</h5><br>`); }
+        </script>
+    </div>
 </body>
+
 </html>

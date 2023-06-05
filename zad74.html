@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title> Przykład użycia pętli </title>
+    <script language="JavaScript">
+        var l1 = prompt("podaj 1 liczbe z przedzialu 20-60")
+        var l2 = prompt("podaj 2 liczbe z przedzialu 20-60")
+        var pocz = prompt("podaj wartość początkową")
+        var tekst = prompt("podaj tekst")
+        var miejWie = 0
+
+        if (l1 <= 60 && l1 >= 20 && l2 <= 60 && l2 >= 20) {
+            if (l1 < l2) {
+                for (var i = parseInt(pocz); i < 100; i = i + 5) {
+                    document.write(`<p style="font-size:` + i + `px"; color: black;> <br>` + tekst + "<br></p>");
+
+                }
+            }
+            else {
+                for (var i = pocz; i >= 0; i -= 5) {
+                    document.write(`<p style="font-size:` + i + `px"; color: black;> <br>` + tekst + "<br></p>");
+
+                }
+            }
+        }
+        else {
+            tekst = " liczba l1 lub l2 nie spełnia wymagań"
+            document.write("<p>" + tekst + "</p>")
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

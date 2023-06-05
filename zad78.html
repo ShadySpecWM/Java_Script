@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+         var t1 = parseFloat(prompt("Wpisz liczbe 1", ""));
+         var t2 = parseFloat(prompt("Wpisz liczbe 2", ""));
+        if(t1 == t2){
+            alert("brak!");
+        }
+        else if(t1 < t2){
+        for(var i = t1; i <= t2; i++){
+            if(i % 2 == 1)
+                document.write("<p style='color:green;font-size:50px;'>"+i+"</p>");
+        
+        }
+        }
+
+        else if(t1 > t2){
+        for(var i = t2; i <= t1; i++){
+            if(i % 2 == 1)
+                document.write("<p style='color:blue;font-size:25px;'>"+i+"</p>");
+
+        }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
