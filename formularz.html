@@ -1,0 +1,110 @@
+<html>
+<head>
+<script type="text/javascript">
+function obliczanie(dane) 
+{
+ wynik.innerHTML=" ";
+ cena_koncowa=0;
+93
+if (dane.pizza.selectedIndex==0) 
+ {
+ cena_koncowa=40+cena_koncowa;
+ } 
+ if (dane.pizza.selectedIndex==1) 
+ {
+ cena_koncowa=30+cena_koncowa;
+ } 
+ if (dane.pizza.selectedIndex==2) 
+ {
+ cena_koncowa=20+cena_koncowa;
+ }
+  {
+ cena_koncowa=cena_koncowa*parseFloat(dane.cena.value);
+ } 
+ if ( dane.pic[0].checked) 
+ {
+ cena_koncowa=cena_koncowa
+ }
+  if ( dane.pic[1].checked) 
+ {
+ cena_koncowa=8+cena_koncowa;
+ } 
+ if ( dane.pic[2].checked)
+ {
+ cena_koncowa=10+cena_koncowa;
+ }
+ if (dane.salak.selectedIndex==0) 
+ {
+ cena_koncowa=cena_koncowa;
+ }
+ if (dane.salak.selectedIndex==1) 
+ {
+ cena_koncowa=7+cena_koncowa;
+ } 
+ if (dane.salak.selectedIndex==2) 
+ {
+ cena_koncowa=6+cena_koncowa;
+ } 
+ if (dane.salak.selectedIndex==3) 
+ {
+ cena_koncowa=5+cena_koncowa;
+ }
+  if ( dane.wybor[0].checked)
+  {
+  cena_koncowa=cena_koncowa
+  }
+ if ( dane.wybor[1].checked) 
+ {
+ cena_koncowa=0.9*cena_koncowa;
+ } 
+ if ( dane.wybor[2].checked)
+ {
+ cena_koncowa=0.8*cena_koncowa;
+ }
+ if(dane.ubezpieczenie.checked == true)
+ {
+ cena_koncowa=1.10*cena_koncowa;
+ }
+if(dane.gwarancja.checked == true)
+ {
+cena_koncowa=3+cena_koncowa;
+ }
+ wynik.innerHTML="do zapłaty "+cena_koncowa.toFixed(2)+" zł";
+}
+</script>
+</head>
+<body>
+<form name="formularz">
+<b>Wybierz pizze:</b><br><select name="pizza"/>
+<option value="40"> Królewska(40zł)
+<option value="30"> Szlachecka(30zł)
+<option value="20"> Chłopska(20zł)
+</select><br><br>
+<b>Ile pizzy zamawiasz:</b><br>
+<input type="text" name="cena"/><br><br>
+<b>Wybierz napój:</b><br>
+Bez napoju <input type="radio" name="pic" value=0 /><br><br>
+Lipton(8zł) <input type="radio" name="pic" value=10 /><br><br>
+Frugo(10zł) <input type="radio" name="pic" value=20 /><br><br>
+</select><br><br>
+<b>Wybierz sałatke:</b><br><select name="salak"/>
+<option value="0"> Bez sałatki
+<option value="5"> Owocowa(7zł)
+<option value="6"> Grecka(6zł)
+<option value="7"> Firmowa(5zł)
+</select><br><br>
+<b>Podaj rabat:</b><br>
+rabat 0% <input type="radio" name="wybor" value=0 /><br><br>
+rabat 10% <input type="radio" name="wybor" value=10 /><br><br>
+rabat 20% <input type="radio" name="wybor" value=20 /><br><br>
+<b>Podaj opcje dodatkowe:</b><br>
+Dostawa do domu(+20%)<input type="checkbox" name="ubezpieczenie" value=0 /><br> 
+Sos czosnkowy(3zł)<input type="checkbox" name="gwarancja" value=0 /><br><br>
+<!-- <input type="button" value="Oblicz....." onClick="obliczanie(this.form)"/><br><br> -->
+<input type="button" value="Oblicz....." onClick="obliczanie(this.form)"/><br><br>
+</form>
+<table>
+<tr id="wynik"></tr>
+</table>
+</body>
+</html>
